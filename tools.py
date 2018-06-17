@@ -9,3 +9,8 @@ def downloadAndSave(url,fileName="download.html"):
 def downloadString(url):
     response=requests.request("GET",url)
     return str(response.content)
+
+
+def getFileNameFromURL(url):
+    fileName=url.split("/")[-2]+".html"
+    return fileName
